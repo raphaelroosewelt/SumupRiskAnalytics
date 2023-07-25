@@ -1,4 +1,12 @@
 # Sumup RiskAnalytics Technical Test
+
+Key findings
+---------------------------------------------------------------------------
+- On average, a store makes its 5 first transactions in 44 days;
+- Regarding Tipology, "Florist" takes the first position with €509 in average sales and "Foodtruck" the least with €476;
+- The most used device is type 4 with 23,3% although no big difference was perceived among otters;
+- Colombia is the country with the biggest ticket on average: €737.
+
 Executive Summary:
 --------------------------------------------------------------------------
 I chose Snowflake as the Cloud Data Warehouse to create and store tables. Data were transformed using Dbt for ingestion into staging tables and the target table. Jupyter Notebook was used for table creation and data insertion into the target table. 
