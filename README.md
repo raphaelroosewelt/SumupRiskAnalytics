@@ -17,7 +17,7 @@ The final table has the following fields:
 - STORE_ID,
 - NAME,
 - ADDRESS,
-. CITY,
+- CITY,
 - COUNTRY,
 - CREATED_AT_TRANSACTION,
 - TYPOLOGY,
