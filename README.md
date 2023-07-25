@@ -1,9 +1,9 @@
-# SumupRiskAnalytics Technical Test
+# Sumup RiskAnalytics Technical Test
 Executive Summary:
 --------------------------------------------------------------------------
 I chose Snowflake as the Cloud Data Warehouse to create and store tables. Data were transformed using Dbt for ingestion into staging tables and the target table. Jupyter Notebook was used for table creation and data insertion into the target table. 
 
-Finally, Tableau was employed to create a Dashboard, making it easier for stakeholders to interact with the transformed information. Is worth mentioning that Python and SQl were the languages selected for the test.
+Finally, Tableau was employed to create a Dashboard, making it easier for stakeholders to interact with the transformed information. Is worth mentioning that Python and SQL were the languages selected for the test.
 
 Two out of three files presented real challenges regarding data quality, such as non-standardized fields like "card_number." Others contained numeric characters that would not be used in calculations. 
 
