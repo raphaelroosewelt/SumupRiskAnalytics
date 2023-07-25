@@ -14,26 +14,26 @@ Implementation Approach:
 As three files were received, the adopted solution was the creation of a flat table that obtained data from three staging tables. Afterwards, a wiel was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance.
 
 The final table has the following fields:
-STORE_ID
-NAME
-ADDRESS
-CITY
-COUNTRY
-CREATED_AT_TRANSACTION
-TYPOLOGY
-CUSTOMER_ID
-TYPE
-TRANSACTION_ID
-DEVICE_ID
-PRODUCT_NAME
-PRODUCT_SKU
-CATEGORY_NAME
-AMOUNT
-STATUS
-CARD_NUMBER
-CVV
-CREATED_AT
-OCCUR_AT
+- STORE_ID,
+- NAME,
+- ADDRESS,
+. CITY,
+- COUNTRY,
+- CREATED_AT_TRANSACTION,
+- TYPOLOGY,
+- CUSTOMER_ID,
+- TYPE,
+- TRANSACTION_ID,
+- DEVICE_ID,
+- PRODUCT_NAME,
+- PRODUCT_SKU,
+- CATEGORY_NAME,
+- AMOUNT,
+- STATUS,
+- CARD_NUMBER,
+- CVV,
+- CREATED_AT,
+- OCCUR_AT
 
 Regarding  data trustworthiness and Controlled Model Changes
 ---------------------------------------------------------------------------
