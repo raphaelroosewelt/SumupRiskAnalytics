@@ -26,7 +26,7 @@ from dbt.clients import system
 # Defining Snowflake connection configuration
 snowflake_config = {
     "user": "ROOSEWELT2020",
-    "password": "#TestSumUp2020",
+    "password": "**************",
     "account": "dvihgoi-yg27269",
     "warehouse": "COMPUTE_WH",
     "database": "CUSTOMER_TARGETING",
