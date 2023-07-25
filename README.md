@@ -9,7 +9,7 @@ Key findings
 
 Executive Summary:
 --------------------------------------------------------------------------
-I chose Snowflake as the Cloud Data Warehouse to create and store tables. Data were transformed using Dbt for ingestion into staging tables and the target table. Jupyter Notebook was used for table creation and data insertion into the target table. 
+Snowflake was chosen as Cloud Data Warehouse to store tables. Data were transformed using dbt, as well as ingested into staging tables and the target table. Jupyter Notebook was used for table creation. To load data into the target table, dbt was integrated with Jupyter. 
 
 Finally, Tableau was employed to create a Dashboard, making it easier for stakeholders to interact with the transformed information. Is worth mentioning that Python and SQL were the languages selected for the test.
 
@@ -19,7 +19,7 @@ The adopted solution was to standardize all three files beforehand, ensuring the
 
 Implementation Approach:
 ---------------------------------------------------------------------------
-As three files were received, the adopted solution was the creation of a flat table that obtained data from three staging tables. Afterwards, a wiel was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance.
+As three files were received, the adopted solution was the creation of a flat table that got  data from three staging tables. Afterwards, a view table was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance. In terms of the volume of data, my assumption is, since this is a simple solution, we could avoid issues regarding updates and maintenance. 
 
 The final table has the following fields:
 - STORE_ID,
