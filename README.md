@@ -6,9 +6,8 @@ Key findings
 - Regarding Tipology, "Florist" takes the first position with €509 in average sales and "Foodtruck" the least with €476;
 - The most used device is type 4 with 23,3% although no big difference was perceived among otters;
 - Colombia is the country with the biggest ticket on average: €737.
-
-  ![image](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/66ee8c78-1bfd-41e9-abdb-7474ca081aef)
-
+  
+![image](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/c7517f45-9a92-415c-a697-0025534f750d)
 
 Executive Summary:
 --------------------------------------------------------------------------
