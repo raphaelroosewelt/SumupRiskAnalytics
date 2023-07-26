@@ -7,6 +7,9 @@ Key findings
 - The most used device is type 4 with 23,3% although no big difference was perceived among otters;
 - Colombia is the country with the biggest ticket on average: €737.
 
+  ![image](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/66ee8c78-1bfd-41e9-abdb-7474ca081aef)
+
+
 Executive Summary:
 --------------------------------------------------------------------------
 Snowflake was chosen as Cloud Data Warehouse to store tables. Data were transformed using dbt cloud, as well as ingested into staging tables and the target table. Jupyter Notebook was used for table creation. To load data into the target table, dbt was integrated with Jupyter. 
