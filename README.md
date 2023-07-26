@@ -23,29 +23,54 @@ The adopted solution was to standardize all three files beforehand, ensuring the
 
 Implementation Approach:
 ---------------------------------------------------------------------------
-As three files were received, the adopted solution was the creation of a flat table that got  data from three staging tables. Afterwards, a view table was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance. In terms of the volume of data, my assumption is, since this is a simple solution, we could avoid issues regarding updates and maintenance. 
+The adopted solution was the creation of a flat table from three staging tables, as shown below: 
+![image](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/ca94e1f2-598c-4900-8ff2-219a34c4f8da)
 
-The final table has the following fields:
-- STORE_ID,
-- NAME,
-- ADDRESS,
-- CITY,
-- COUNTRY,
-- CREATED_AT_TRANSACTION,
-- TYPOLOGY,
-- CUSTOMER_ID,
-- TYPE,
-- TRANSACTION_ID,
-- DEVICE_ID,
-- PRODUCT_NAME,
-- PRODUCT_SKU,
-- CATEGORY_NAME,
-- AMOUNT,
-- STATUS,
-- CARD_NUMBER,
-- CVV,
-- CREATED_AT,
-- OCCUR_AT
+Summary of Table Relationships:
+---------------------------------------------------------------------------
+
+1. **staging_transaction**:
+   - Contains information about transactions with attributes such as "id," "device_id," "product_name," "product_sku," "category_name," "amount," "status," "card_number," "cvv," "created_at," and "occur_at."
+
+2. **staging_store**:
+   - Stores information about stores with attributes like "store_id," "name," "address," "city," "country," "created_at," "typology," and "customer_id."
+
+3. **staging_device**:
+   - Holds details about devices with attributes like "id," "type," and a foreign key "store_id" referencing "store_id" in the "staging_store" table.
+
+4. **store_device**:
+   - An associative table representing the many-to-many relationship between "staging_store" and "staging_device." It has foreign keys "store_id" and "id," referencing "store_id" in the "staging_store" table and "id" in the "staging_device" table, respectively.
+
+5. **customer_targeting**:
+   - Combines all attributes from the three previous tables. Includes attributes such as "store_id," "name," "address," "city," "country," "created_at_transaction," "typology," "customer_id," "type," "transaction_id," "device_id," "product_name," "product_sku," "category_name," "amount," "status," "card_number," "cvv," "created_at," and "occur_at."
+
+Afterwards, a view table was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance. In terms of the volume of data, my assumption is, since this is a simple solution, we could avoid issues regarding updates and maintenance. 
+
+The final table: 
++----------------------+
+| customer_targeting   |
++----------------------+
+| store_id (PK)        |
+| name                 |
+| address              |
+| city                 |
+| country              |
+|created_at_transaction|
+| typology             |
+| customer_id          |
+| type                 |
+| transaction_id       |
+| device_id            |
+| product_name         |
+| product_sku          |
+| category_name        |  
+| amount               |
+| status               |
+| card_number          |
+| cvv                  |
+| created_at           |
+| occur_at             |
++----------------------+
 
 Regarding  data trustworthiness and Controlled Model Changes
 ---------------------------------------------------------------------------
