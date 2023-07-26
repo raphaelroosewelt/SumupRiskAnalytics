@@ -17,7 +17,9 @@ Finally, Tableau was employed to create a Dashboard, making it easier for stakeh
 
 Two out of three files presented real challenges regarding data quality, such as non-standardized fields like "card_number." Others contained numeric characters that would not be used in calculations. 
 
-The adopted solution was to standardize all three files beforehand, ensuring the cleansing of the entire dataset. The SQL queries inside the "transformations" tab document the steps taken. 
+The adopted solution was to standardize all three files beforehand, ensuring the cleansing of the entire dataset. The SQL queries inside the "transformations" tab document the steps taken.
+
+![architecture-data-sumup-riskan-alytics](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/2dd22402-d230-4037-b971-7c3787dda1c8)
 
 Implementation Approach:
 ---------------------------------------------------------------------------
