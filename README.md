@@ -46,6 +46,7 @@ Combines all attributes from the three previous tables. Includes attributes such
 Afterwards, a view table was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance. In terms of the volume of data, my assumption is, since this is a simple solution, we could avoid issues regarding updates and maintenance. 
 
 The final table:
+
 ![customer-targeting](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/545d37e1-2ff9-44b8-90a4-63e69f5660c8)
 
 Regarding  data trustworthiness and Controlled Model Changes
