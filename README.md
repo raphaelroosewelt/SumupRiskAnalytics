@@ -9,7 +9,7 @@ Key findings
 
 Executive Summary:
 --------------------------------------------------------------------------
-Snowflake was chosen as Cloud Data Warehouse to store tables. Data were transformed using dbt, as well as ingested into staging tables and the target table. Jupyter Notebook was used for table creation. To load data into the target table, dbt was integrated with Jupyter. 
+Snowflake was chosen as Cloud Data Warehouse to store tables. Data were transformed using dbt cloud, as well as ingested into staging tables and the target table. Jupyter Notebook was used for table creation. To load data into the target table, dbt was integrated with Jupyter. 
 
 Finally, Tableau was employed to create a Dashboard, making it easier for stakeholders to interact with the transformed information. Is worth mentioning that Python and SQL were the languages selected for the test.
 
