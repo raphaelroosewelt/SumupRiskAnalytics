@@ -338,6 +338,7 @@ conn.commit()
 # Creating table customer_targeting.
 create_table_query = """
     CREATE OR REPLACE TABLE customer_targeting (
+        ROWID VARCHAR(100),
         STORE_ID VARCHAR(100),
         NAME VARCHAR(100),
         ADDRESS VARCHAR(100),
@@ -375,6 +376,7 @@ cursor.execute(create_table_query)
 # Generating the insert query
 insert_query = """
     INSERT INTO customer_targeting (
+        ROWID,
         STORE_ID,
         NAME,
         ADDRESS,
@@ -395,8 +397,8 @@ insert_query = """
         CVV,
         CREATED_AT,
         OCCUR_AT
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
-              %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+               %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
     )
 """
 
