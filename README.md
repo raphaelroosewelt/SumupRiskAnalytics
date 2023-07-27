@@ -41,13 +41,13 @@ Holds details about devices with attributes like "id," "type," and a foreign key
 An associative table representing the many-to-many relationship between "staging_store" and "staging_device." It has foreign keys "store_id" and "id," referencing "store_id" in the "staging_store" table and "id" in the "staging_device" table, respectively.
 
 5. customer_targeting
-Combines all attributes from the three previous tables. Includes attributes such as "store_id," "name," "address," "city," "country," "created_at_transaction," "typology," "customer_id," "type," "transaction_id," "device_id," "product_name," "product_sku," "category_name," "amount," "status," "card_number," "cvv," "created_at," and "occur_at."
+Combines all attributes from the three previous tables. Includes attributes such as "id", "store_id," "name," "address," "city," "country," "created_at_transaction," "typology," "customer_id," "type," "transaction_id," "device_id," "product_name," "product_sku," "category_name," "amount," "status," "card_number," "cvv," "created_at," and "occur_at."
 
 Afterwards, a view table was generated. By adopting this solution, we can assure a single source of truth, ensure data quality, and guarantee process governance. In terms of the volume of data, my assumption is, since this is a simple solution, we could avoid issues regarding updates and maintenance. 
 
 The final table:
 
-![customer-targeting](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/545d37e1-2ff9-44b8-90a4-63e69f5660c8)
+![customer-targeting](https://github.com/raphaelroosewelt/SumupRiskAnalytics/assets/140111797/81b15254-2622-448f-ba02-91cef0a425c6)
 
 Regarding  data trustworthiness and Controlled Model Changes
 ---------------------------------------------------------------------------
