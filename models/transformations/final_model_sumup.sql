@@ -37,6 +37,7 @@ with
     )
 
 select
+    to_varchar(a.id) as rowid,  -- Unique identifier (PK)
     c.store_id,
     name,
     regexp_replace((address), '[.#,]', '') as address,
@@ -46,6 +47,7 @@ select
     typology,
     customer_id,
     -- End First part: data from staging_store
+    -- to_varchar(b.store_id) as store_id_tb_device,
     to_varchar(b.type) as type,
     -- End Second part: data from staging_device
     to_varchar(a.id) as transaction_id,
@@ -69,7 +71,7 @@ left join staging_device b on a.device_id = b.id
 left join trns_staging_store c on b.store_id = c.store_id
 
 group by
-
+    rowid,
     c.store_id,
     name,
     address,
@@ -78,7 +80,10 @@ group by
     c.created_at_transaction,
     typology,
     customer_id,
+
+    -- store_id_tb_device,
     type,
+
     transaction_id,
     device_id,
     product_name,
